@@ -1,0 +1,129 @@
+.sidebar{
+    width: 300px;
+    margin-right: 24px;
+    .content{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        #avatar{
+            background-color: #F6F5FA;
+            position: relative;
+            margin-bottom: 16px;
+            .avatarImage{
+                width: 150px;
+                height: 150px;
+            }
+            .avatarIcon{
+                position: absolute;
+                bottom: 8px;
+                left: 8px;
+                background-color: #fff;
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+            }
+        }
+        #info{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 16px;
+            .top{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                p{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 25.2px;
+                }
+            }
+            .bottom{
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                .stars{
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                    * {
+                        height: 12px;
+                        width: 12px;
+                    }
+                }
+                p{
+                    font-size: 12px;
+                    line-height: 16.8px;
+                    font-weight: 400;
+                    &.reviews{
+                        color: #74B200;
+                    }
+                }
+            }
+                
+        }
+        #management{
+            display: flex;
+            gap: 8px;
+            .element{
+                height: 87px;
+                width: 94px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fff;
+                border-radius: 8px;
+                gap: 4px;
+                .title{
+                    font-size: 11px;
+                    line-height: 15.4px;
+                    font-weight: 400;
+                    color: #636570;
+                }
+                .amount{
+                    font-size: 13px;
+                    line-height: 18.2px;
+                    font-weight: 500;
+                    color: #2A2C36;
+                }
+            }
+        }
+        hr{
+            margin: 16px 0;
+            width: 300px;
+            border: 1px solid #DCDDE5;
+        }
+        #actions{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+            .action{
+                color: #2A2C36; 
+                font-size: 15px;
+                line-height: 21px;
+                font-weight: 400;
+                &.active{
+                    color: #74B200;
+                }
+            }
+        }
+        #signOut{
+            .signOutButton{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #2A2C36;
+                font-size: 15px;
+                line-height: 21px;
+                font-weight: 400;
+            }
+        }
+    }
+}
+

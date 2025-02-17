@@ -1,0 +1,82 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 95px;
+    gap: 8px;
+}
+
+
+.barContainer {
+    width: 95px;
+    height: 240px;
+    background-color: #F6F5FA;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column-reverse;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.filledBar {
+    width: 100%;
+    border-radius: 8px;
+    background-color: #8FBA3E;
+    transition: height 0.5s ease;
+}
+
+
+.dateText {
+    font-size: 13px;
+    line-height: 18.2px;
+    color: #636570;
+}
+.tooltip {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    pointer-events: none;
+    transform: translate(-50%, -100%);
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 72px;
+        .barContainer {
+            width: 72px;
+        }
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        width: 32px;
+        .barContainer {
+            width: 32px;
+            height: 160px;
+        }
+        .dateText {
+            font-size: 11px;
+            line-height: 15.4px;
+            white-space: nowrap;
+        }
+    }
+}
+@media (max-width: 360px) {
+    .container {
+        width: 24px;
+        .barContainer {
+            width: 24px;
+            height: 160px;
+        }
+        .dateText {
+            font-size: 11px;
+            line-height: 15.4px;
+            white-space: nowrap;
+        }
+    }
+}

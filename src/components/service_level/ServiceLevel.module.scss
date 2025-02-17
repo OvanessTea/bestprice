@@ -1,0 +1,116 @@
+.wrapper {
+    position: relative;
+
+    .header {
+        margin-bottom: 24px;
+
+        h2 {
+            font-size: 24px;
+            line-height: 33.6px;
+            font-weight: 600;
+            color: #2A2C36;
+        }
+    }
+
+    .content {
+        .level {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+
+            .level_count {
+                display: flex;
+                gap: 8px;
+                align-items: flex-end;
+                margin-bottom: 16px;
+
+                .level_count_value {
+                    font-size: 24px;
+                    line-height: 33.6px;
+                    font-weight: 700;
+                    color: #2A2C36;
+                }
+
+                .level_count_description {
+                    color: #636570;
+                    font-size: 12px;
+                    line-height: 16.8px;
+                }
+            }
+
+            .level_description {
+                display: flex;
+                gap: 8px;
+                flex-direction: column;
+                margin-top: 16px;
+
+                .level_description_title {
+                    font-size: 14px;
+                    line-height: 19.6px;
+                    font-weight: 600;
+                    color: #2A2C36;
+                }
+
+                .level_description_text {
+                    font-size: 13px;
+                    line-height: 18.2px;
+                    color: #636570;
+                }
+
+            }
+        }
+    }
+    :global(.ant-skeleton) {
+        &, & * {
+            width: 100% !important;
+            height: 200px !important;
+        }
+    }
+    .more_info {
+        position: absolute;
+        top: -16px;
+        right: -16px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .more_info {
+        position: relative;
+        display: inline-block;
+
+        &:after {
+            content: attr(data-title);
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #fff;
+            border: 1px solid #898B94;
+            color: #2A2C36;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+        &:active:after,  
+        &:focus:after {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+
+@media (max-width: 480px) {
+    .wrapper {
+        .header {
+            h2 {
+                font-size: 18px;
+                line-height: 25.2px;
+            }
+        }
+    }
+}

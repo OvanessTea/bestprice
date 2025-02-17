@@ -1,0 +1,101 @@
+.navbar {
+    height: 89px;
+    background-color: #fff;
+    width: 100%;
+    margin-bottom: 40px;
+    .content {
+        height: 48px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        #logo {
+            margin-right: 32px;
+        }
+        #location{
+            margin-right: 24px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            .locationIcon{
+                background-color: #F6F5FA;
+                border-radius: 50%;
+                padding: 8px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 19.6px;
+                font-weight: 400;
+                color: #2a2c36;
+            }
+
+        }
+        #categories{
+            margin-right: 16px;
+            button{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                background-color: #2A2C36;
+                padding: 12px 16px;
+                border-radius: 8px;
+                p{
+                    font-size: 14px;
+                    line-height: 19.6px;
+                    font-weight: 600;
+                    color: #fff;
+                }
+            }
+        }
+        #search{
+            margin-right: 16px;
+            position: relative;
+            display: inline-block;
+            input {
+                width: 358px;
+                height: 48px;
+                padding: 0 16px;
+                border-radius: 8px;
+                background-color: #F6F5FA;
+                color: #636570;
+                font-size: 14px;
+                line-height: 19.6px;
+                font-weight: 400;
+            }
+            .searchIcon {
+                height: 16px;
+                width: 16px;
+                position: absolute;
+                right: 16px;
+                top: 50%;
+                transform: translateY(-50%);
+                cursor: pointer;
+            }
+        }
+        #newPost {
+            margin-right: 24px;
+            button{
+                background-color: #74B200;
+                color: #fff;
+                border-radius: 8px;
+                font-size: 14px;
+                line-height: 19.6px;
+                font-weight: 400;
+                padding: 14px 16px;
+            }
+        }
+        #actions{
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            .favorites, .notifications, .messages, .profile{ 
+                width: 40px;
+                height: 40px;
+                background-color: #F6F5FA;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+}
