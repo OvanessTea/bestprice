@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { Skeleton } from "antd";
 import classNames from "classnames";
 import Image from "next/image";
-import caret_right from "@/assets/caret_right.svg";
 
 
 interface IIncome {
@@ -59,7 +58,7 @@ export default function Ads() {
                                 <div className="flex gap-1 items-center">
                                     <p>{item.amount.toLocaleString('ru-RU')}</p>
                                     <button>
-                                        <Image src={caret_right} alt="more info" />
+                                        <Image src={"/caret_right.svg"} alt="more info" width={16} height={16}/>
                                     </button>
                                 </div>
                             </div>

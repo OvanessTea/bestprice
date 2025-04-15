@@ -5,7 +5,6 @@ import { Skeleton } from "antd";
 import ProgressBar from "@/components/progress_bar/ProgressBar";
 import classNames from "classnames";
 import Image from "next/image";
-import question from "@/assets/question.svg";
 
 interface IActivity {
     active_level: number;
@@ -77,7 +76,7 @@ export default function Activity() {
             </div>
             <div className={styles.more_info} title="Узнать больше" data-title="Узнать больше">
                 <button>
-                    <Image src={question} alt="more info" />
+                    <Image src={"/question.svg"} alt="more info" width={20} height={20}/>
                 </button>
             </div>
         </div>

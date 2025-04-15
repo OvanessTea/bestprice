@@ -3,7 +3,6 @@ import styles from "./Incomes.module.scss";
 import { useState, useEffect } from "react";
 import { Skeleton } from "antd";
 import Image from "next/image";
-import coins from "@/assets/coins.svg";
 import classNames from "classnames";
 
 interface IIncome {
@@ -35,7 +34,7 @@ export default function Incomes() {
 
     if (data.length === 0) {
         return <div className={classNames(styles.wrapper, styles.empty)}>
-            <Image src={coins} alt="coins" />
+            <Image src={"/coins.svg"} alt="coins" width={64} height={64}/>
             <p>Здесь появятся доходы от заказов,
             оформленных с доставкой.</p>
         </div>

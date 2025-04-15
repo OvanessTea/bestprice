@@ -1,12 +1,8 @@
 import React from "react";
 import styles from "./Footer.module.scss";
-import map_pin from "@/assets/map_pin.svg";
 import Image from "next/image";
 import classNames from "classnames";
-import google_play from "@/assets/google_play.svg";
-import app_store from "@/assets/app_store.svg";
 import Link from "next/link";
-import caret_up from "@/assets/caret_up.svg";
 
 const Footer = () => {
     const footerClass = classNames(
@@ -18,17 +14,17 @@ const Footer = () => {
         <div className={styles.content}>
             <div id={styles.location} className="flex items-center gap-2">
                 <div className={styles.locationIcon}>
-                    <Image src={map_pin} alt="location" />
+                    <Image src={"/map_pin.svg"} alt="location" width={32} height={32}/>
                 </div>
                 <p>Москва</p>
             </div>
             <div id={styles.mobile_apps}>
                 <p>Мобильные приложения:</p>
                 <button>
-                    <Image src={google_play} alt="google_play" />
+                    <Image src={"/google_play.svg"} alt="google_play" width={32} height={32} />
                 </button>
                 <button>
-                    <Image src={app_store} alt="app_store" />
+                    <Image src={"/app_store.svg"} alt="app_store" width={32} height={32} />
                 </button>
             </div>
             <div id={styles.social_media}>
@@ -87,7 +83,7 @@ const Footer = () => {
                 </div>
             </div>
             <button className={styles.open_chat}>
-                <Image src={caret_up} alt="open_chat" />
+                <Image src={"/caret_up.svg"} alt="open_chat" width={24} height={24} />
             </button>
         </div>
     </div>

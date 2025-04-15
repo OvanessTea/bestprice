@@ -5,8 +5,6 @@ import styles from "./Statistics.module.scss";
 import { Skeleton } from 'antd';
 import classNames from 'classnames';
 import Image from 'next/image';
-import arrow_up from '@/assets/arrow_up.svg';
-import arrow_down from '@/assets/arrow_down.svg';
 import StatisticsGraph from "./graph/StatisticsGraph";
 
 interface StatisticsTab {
@@ -93,9 +91,9 @@ export default function Statistics() {
                                     </div>
                                     <div className={classNames(styles.tab_percent, { [styles.positive]: item.percent > 0, [styles.negative]: item.percent < 0 })}>
                                         {item.percent > 0 ? (
-                                            <Image src={arrow_up} alt="arrow_up" width={13} height={13} />
+                                            <Image src={"/arrow_up.svg"} alt="arrow_up" width={13} height={13} />
                                         ) : (
-                                            <Image src={arrow_down} alt="arrow_down" width={13} height={13} />
+                                            <Image src={"/arrow_down.svg"} alt="arrow_down" width={13} height={13} />
                                         )}{Math.abs(item.percent)}%
                                     </div>
                                 </div>
