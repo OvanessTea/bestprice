@@ -14,19 +14,29 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [windowWidth, setWindowWidth] = useState<number | null>(null);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+    if (typeof window !== 'undefined') {
+      const handleResize = () => setWindowWidth(window.innerWidth);
 
-    window.addEventListener('resize', handleResize);
+      handleResize();
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+      window.addEventListener('resize', handleResize);
+
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
+
+  if (windowWidth === null) {
+    return <html lang="en">
+      <body>
+        <div className="w-full h-full flex items-center justify-center">
+          <div className="w-10 h-10 bg-gray-200 rounded-full animate-pulse"></div>
+        </div>
+      </body>
+    </html>;
+  }
 
   return (
     <html lang="en">

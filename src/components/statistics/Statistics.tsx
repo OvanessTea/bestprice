@@ -20,18 +20,18 @@ export default function Statistics() {
     const [data, setData] = useState<StatisticsTab[]>([]);
     const [activeTab, setActiveTab] = useState<string>('');
     const [isLoading, setIsLoading] = useState(true);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+    const [windowWidth, setWindowWidth] = useState<number | null>(null);
 
   useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
+    if (typeof window !== 'undefined') {
+      const handleResize = () => setWindowWidth(window.innerWidth);
 
-    window.addEventListener('resize', handleResize);
+      handleResize();
 
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
+      window.addEventListener('resize', handleResize);
+
+      return () => window.removeEventListener('resize', handleResize);
+    }
   }, []);
 
     useEffect(() => {
@@ -60,6 +60,10 @@ export default function Statistics() {
                 ))}
             </div>
         </div>;
+    }
+
+    if (windowWidth === null) {
+        return null;
     }
 
     return (

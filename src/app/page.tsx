@@ -1,3 +1,4 @@
+"use client"
 import Statistics from "@/components/statistics/Statistics";
 import styles from "./main.module.scss";
 import classNames from "classnames";
